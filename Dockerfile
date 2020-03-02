@@ -1,8 +1,8 @@
-FROM circleci/openjdk:11.0.1-jdk
-MAINTAINER jorritvdven <jorrit@jorritvdven.nl>
+FROM cimg/base:stable
+MAINTAINER jorritvdven <ja.ven@portofrotterdam.com>
 
-ENV PLANTUML_VERSION 1.2018.13
-RUN sudo apt install graphviz \
+ENV PLANTUML_VERSION 1.2020.2
+RUN sudo apt install openjdk-13-jdk graphviz \
     && sudo mkdir /opt/plantuml \
     && sudo curl -L https://sourceforge.net/projects/plantuml/files/plantuml.${PLANTUML_VERSION}.jar/download -o /usr/share/java/plantuml.jar
 
